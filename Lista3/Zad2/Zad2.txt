@@ -1,2 +1,0 @@
-Ilość porównań: k + n - 1
-Liczba inwersji: n(n-1)/2
