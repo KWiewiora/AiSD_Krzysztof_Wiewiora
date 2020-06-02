@@ -1,0 +1,52 @@
+void insertion_sort (double t[], int n)
+{
+  for (int k = 1; k < n; k++)
+    for(int i = k; i > 0 && t[i-1] > t[i]; i--)
+	    std::swap(t[i],t[i - 1]);
+}
+
+a) t = { 1, 2, 3, 4, 5, 6, 7 }
+zewnętrzy for:
+    1. iteracja
+        wewnętrzny for od k = 1 do 0:
+            1 porónanie
+    2. iteracja
+        wewnętrzy for od k = 2 do 0:
+            1 porównania
+    3. iteracja
+        wewnętrzy for od k = 3 do 0:
+            1 porównania
+    4. iteracja
+        wewnętrzy for od k = 4 do 0:
+            1 porównania
+    5. iteracja
+        wewnętrzy for od k = 5 do 0:
+            1 porównania
+    6. iteracja
+        wewnętrzy for od k = 6 do 0:
+            1 porównania
+
+razem porównań: 6
+
+b) t = { 7, 6, 5, 4, 3, 2, 1 }
+zewnętrzy for:
+    1. iteracja
+        wewnętrzny for od k = 1 do 0:
+            1 porónanie
+    2. iteracja
+        wewnętrzy for od k = 2 do 0:
+            2 porównania
+    3. iteracja
+        wewnętrzy for od k = 3 do 0:
+            3 porównania
+    4. iteracja
+        wewnętrzy for od k = 4 do 0:
+            4 porównania
+    5. iteracja
+        wewnętrzy for od k = 5 do 0:
+            5 porównania
+    6. iteracja
+        wewnętrzy for od k = 6 do 0:
+            6 porównania
+            
+razem porównań: 21

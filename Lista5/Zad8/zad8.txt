@@ -1,0 +1,5 @@
+a) maks. 2 log (hb +1), min. 1
+b)
+balanceFactor = height(leftSubTree) − height(rightSubTree)
+drzewo jest zrównoważone, jeśli współczynnik wyważenia wynosi 0, +1 lub -1
+gdy współczynnik przyjmuje niedozwoloną wartość, wykonuje się operację rotacji węzłów w celu przywrócenia zrównoważenia

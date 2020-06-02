@@ -1,0 +1,7 @@
+A. (Insertion sort) TAK. Nie zmieniamy miejscami elementów, które są równe sobie. Zwyczajnie wstawiamy element mniejszy przed elementem większym.
+B. (Quick sort) NIE. Gdy w liście mamy dwa elementu równe sobie, to w tym algorytmie zmieni je miejscami. np. (1,5,2,5,3)
+C. (Heapsort) NIE. Z racji tego że, w tym algorytmie elementy wrzucane są na kopiec, w tym momencie tracona jest informacja na temat kolejności elementów.
+D. (Merge sort) TAK. W momencie kiedy napiszemy dobrze algorytm (<= zamiast <) to nie będzie zmieniać kolejności elementów.
+E. (Counting sort) TAK. Ponieważ nie zmieniamy kolejności elementów przy ich zliczaniu. Odwołujemy się do nich po kolei.
+F. (Radix sort) TAK/NIE. Jeżeli będziemy sortować od najmniej ważnych elementów (jedności) to ten algorytm będzie stabilny, natomiast jeżeli będziemy chcieli sortować po najbardziej ważnych (np double) to nie będzie stabilny. 
+G. (Bucket sort) TAK. Jest stabilny, z racji tego, że nie zmieniamy kolejności elementów przy wkładaniu ich do "bucket'ów".

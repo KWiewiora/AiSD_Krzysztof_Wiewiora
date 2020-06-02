@@ -1,0 +1,1 @@
+W sortowaniu kubełkowym liczba segmentów n musi być równa długości sortowanej tablicy, a tablica wejściowa musi być równomiernie rozłożona w zakresie możliwych wartości segmentów.  Jeśli te wymagania nie zostaną spełnione, wydajność sortowania będzie zdominowana przez czas działania nextSort, który zwykle jest sortowaniem wstawiania O (n ^ {2}).

@@ -1,0 +1,6 @@
+Najgorszy przypadek jest gdy partition dzieli tablicę na część z 1 elementem i n-1 elementami. Dzieje się tak np. gdy pivotem jest ostatni element tablicy, a tablica jest posortowana rosnąco.
+Złożoność funkcji partition: O(n) (przejście przez wszystkie elementy i porównanie ich z pivotem).
+W najgorszym przypadku partition zostanie wywołany n-1 razy, 
+za każdym razem dla tablicy mniejszej o 1 element niż poprzednio. 
+k-te wywołanie partition będzie wymagało iteracji przez n-k elementów więc dla najgorszego przypadku złożoność quick sorta będzie sumą: 
+(n-k) dla k od 0 do n czyli n + n-1 + n-2 + n-3 + ... = n(n+1)/2 czyli złożoność wynosi O(n^2).

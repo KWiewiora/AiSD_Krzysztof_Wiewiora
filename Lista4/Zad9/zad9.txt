@@ -1,0 +1,56 @@
+int partition (double t[], int n)
+{
+	int k = -1;
+	double x = t[n / 2];
+	for(;;)
+	{
+		while (t[--n] > x);
+		while (t[++k] < x);
+		if (k < n) 
+			std::swap(t[k], t[n]);
+		else
+			return k;
+	}
+}
+
+a) 
+t = { 7, 6, 5, 4, 3, 2, 1 }
+x = t[n/2] = t[3] = 4
+w pętli for:
+	1. Iteracja 
+		1. while: przechodzi od skrajnie prawego elementu do takiego, który nie jest większy od x - tutaj zatrzyma się na elemencie o indeksie n = 6 (1)
+		2. while: przechodzi od skrajnie lewego elementu do takiego, który nie jest mniejszy od x - tutaj zatrzyma się na elemencie o indeksie k = 0 (7)
+		3. if (ponieważ 0 < 6): zamiana miejscami 7 oraz 1, tablica po zamianie: { 1, 6, 5, 4, 3, 2, 7 }
+
+	2. Iteracja 
+		1. while: przechodzi od elementu o jeden w lewo od tego na którym zakończono ostatnio do takiego, który nie jest większy od x - tutaj zatrzyma się na elemencie o indeksie n = 5 (2)
+		2. while: przechodzi od elementu o jeden w prawo od tego na którym zakończono ostatnio do takiego, który nie jest mniejszy od x - tutaj zatrzyma się na elemencie o indeksie k = 1 (6)
+		3. if (ponieważ 1 < 5): zamiana miejscami 6 oraz 2, tablica po zamianie: { 1, 2, 5, 4, 3, 6, 7 }
+
+	3. Iteracja 
+		1. while: przechodzi od elementu o jeden w lewo od tego na którym zakończono ostatnio do takiego, który nie jest większy od x - tutaj zatrzyma się na elemencie o indeksie n = 4 (3)
+		2. while: przechodzi od elementu o jeden w prawo od tego na którym zakończono ostatnio do takiego, który nie jest mniejszy od x - tutaj zatrzyma się na elemencie o indeksie k = 2 (5)
+		3. if (ponieważ 2 < 4): zamiana miejscami 5 oraz 3, tablica po zamianie: { 1, 2, 3, 4, 5, 6, 7 }
+
+	4. Iteracja
+		1. while: przechodzi od elementu o jeden w lewo od tego na którym zakończono ostatnio do takiego, który nie jest większy od x - tutaj zatrzyma się na elemencie o indeksie n = 3 (4)
+		2. while: przechodzi od elementu o jeden w prawo od tego na którym zakończono ostatnio do takiego, który nie jest mniejszy od x - tutaj zatrzyma sięż na elemencie o indeksie k = 3 (4)
+		3. else (ponieważ 3 nie jest mniejsze od 3) - wyjście z funkcji i zwrócenie k = 3.
+
+Tablica po wywołaniu partiton: { 1, 2, 3, 4, 5, 6, 7 }.
+
+b)
+t = { 7, 6, 5, 4, 3, 2, 1 }
+x = t[0] = 7
+w pętli for:
+	1. Iteracja 
+		1. while: przechodzi od skrajnie prawego elementu do takiego, który nie jest większy od x - tutaj zatrzyma się na elemencie o indeksie n = 6 (1)
+		2. while: przechodzi od skrajnie lewego elementu do takiego, który nie jest mniejszy od x - tutaj zatrzyma się na elemencie o indeksie k = 0 (7)
+		3. if (ponieważ 0 < 6): zamiana miejscami 7 oraz 1, tablica po zamianie: { 1, 6, 5, 4, 3, 2, 7 }
+
+	2. Iteracja 
+		1. while: przechodzi od elementu o jeden w lewo od tego na którym zakończono ostatnio do takiego, który nie jest większy od x - tutaj zatrzyma się na elemencie o indeksie n = 5 (2)
+		2. while: przechodzi od elementu o jeden w prawo od tego na którym zakończono ostatnio do takiego, który nie jest mniejszy od x - tutaj zatrzyma się na elemencie o indeksie k = 6 (7)
+		3. else (ponieważ 6 nie jest mniejsze od 5) - wyjście z funkcji i zwrócenie k = 6.
+
+Tablica po wywołaniu partiton: { 1, 6, 5, 4, 3, 2, 7 }.
