@@ -1,0 +1,19 @@
+m,f,h należą do N != 0 , które NWD(m,f) = 1
+wzór ogólny:
+a_j = h * j + f dla j = 0 , .. , m -1
+gdzie x+y mod n
+r_ij = a_i - a_j mod m 
+->
+r_ij = h + * i*f - (h* j+f) mod m, gdzie i != j
+więc 
+r_ij = (i-j)*f mod m, gdzie i -j != 0
+z tego wynika, że r_ij = {0,1,2, ..., m-1}
+czyli (i-j)*f mod m == 0
+k = i-j => |k| <= m - 1 
+co daje
+k*f = 0 mod m => n * m gdzie n należy do liczb całkowitych
+P mod m = 0 tak jak i L mod m = 0
+k != 0 i |k| < m 
+więc r_ij = 0 jest nieprawdą.
+Więc wszystkie wyrazy a_i są różne.
+gdyby a_i = a_j to r_ij = 0, co jest niemożliwe.

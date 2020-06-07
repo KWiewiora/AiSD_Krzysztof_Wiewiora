@@ -1,0 +1,7 @@
+Haszowanie liniowe tworzy klastry złożone z zajętych miejsc sąsiadujących.
+jeśli jakieś miejsce zostanie zajęte i jakaś wartość się powtórzy w funkcji haszujacej, trafia ona do pierwszego wolnego miejsca powtórzonego.
+Im większy taki klaster tym większe będzie przyciąganie kolejnych liczb do siebie i zwiększania swojej długości.
+Haszowanie podwójne ma sens gdy funkcje mieszające są niezależne od siebie i zdeklarowane.
+np 
+h(k) = 1 + (k mod m')
+gdzie m' = m-1 lub m' = m-2
